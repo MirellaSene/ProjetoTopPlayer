@@ -1,7 +1,7 @@
-// app.js
 import express from "express";
 import cors from "cors";
 import usuarioRoutes from "./routes/usuariosRoutes.js";
+import jogoRoutes from "./routes/JogoRoutes.js";
 
 const app = express();
 
@@ -12,6 +12,7 @@ app.get("/", (req, res) => {
     res.json({ msg: "oiii" });
 });
 
-app.use("/usuarios", usuarioRoutes);
+app.use("/Usuarios", usuarioRoutes);
+app.use("/Jogos", jogoRoutes);
 
 export default app;
